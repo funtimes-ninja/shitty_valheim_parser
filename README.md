@@ -14,6 +14,5 @@
 4. Run the script
 
     `python shitty_valheim_log_parser.py some_valheim_logfile_you_saved.txt`
-
-![alt text](https://github.com/funtimes-ninja/shitty_valheim_parser/blob/master/example_output.png)
+![alt text](https://github.com/funtimes-ninja/shitty_valheim_parser/blob/main/example_output.png)
 # Enjoy!
