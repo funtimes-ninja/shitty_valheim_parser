@@ -189,6 +189,7 @@ death_table_str = str(death_table) # pylint: disable=invalid-name
 # Split each table into a list of strings, representing each row
 events_table_rows = events_table_str.split('\n')
 death_table_rows = death_table_str.split('\n')
+events_table_rows_len = int(len(events_table_rows[0]))
 
 # Find the maximum number of rows in both tables
 max_rows = max(len(events_table_rows), len(death_table_rows))
@@ -200,8 +201,7 @@ for i in range(max_rows):
     death_row = death_table_rows[i] if i < len(death_table_rows) else ''
 
     # Print the rows side by side
-    print(f"{events_row:<30} {death_row}")
-
+    print(f"{events_row:<{events_table_rows_len}} {death_row}")
 # Print all players that have logged in, their details from steam and some basic stats
 player_table = PrettyTable()
 player_table.align = 'l'
