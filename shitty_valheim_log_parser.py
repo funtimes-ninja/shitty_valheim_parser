@@ -176,6 +176,7 @@ for k, v in event_log.items():
     for event, count in v.items():
         event_string += f"{event}: {count}, "
     events_table.add_row([G+k+E, R+str(event_string[:-2])+E])
+
 # Print death statistics
 death_table = PrettyTable()
 death_table.align = 'l'
@@ -199,9 +200,9 @@ for i in range(max_rows):
     # Get the current row for each table
     events_row = events_table_rows[i] if i < len(events_table_rows) else ''
     death_row = death_table_rows[i] if i < len(death_table_rows) else ''
-
     # Print the rows side by side
     print(f"{events_row:<{events_table_rows_len}} {death_row}")
+
 # Print all players that have logged in, their details from steam and some basic stats
 player_table = PrettyTable()
 player_table.align = 'l'
